@@ -42,8 +42,9 @@ function App() {
         </div>
         
         <button type='submit'>Submit</button>
-        {firstName&&lastName&&isSubmitted && (<p>Full Name: {firstName} {lastName}</p>)}
+   
       </form>
+      {firstName&&lastName&&isSubmitted && (<p>Full Name: {firstName} {lastName}</p>)}
     </div>
   );
 }
