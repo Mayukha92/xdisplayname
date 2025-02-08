@@ -3,9 +3,9 @@ import './App.css';
 import React, { useState } from 'react';
 
 function App() {
-  const [firstName, setFirstName] = useState("");
+  const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  // const [fullName, setFullName] = useState('');
+  //const [fullName, setFullName] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handlefirstName = (e) =>{
@@ -20,12 +20,13 @@ function App() {
     if(firstName && lastName){
       // setFullName(firstName +" " +lastName);
       setIsSubmitted(true);
-      setFirstName('');
-      setLastName('');
+      
     }else{
       alert('Please fill out both first name and last name')
     }
-    
+    // setFirstName('');
+    // setLastName('');
+    // setIsSubmitted(false);
   }
   return (
     <div className="App">
@@ -41,7 +42,7 @@ function App() {
         </div>
         
         <button type='submit'>Submit</button>
-        {isSubmitted && (<p>Full Name: {firstName} {lastName}</p>)}
+        {firstName&&lastName&&isSubmitted && (<p>Full Name: {firstName} {lastName}</p>)}
       </form>
     </div>
   );
