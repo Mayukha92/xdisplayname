@@ -28,16 +28,16 @@ function App() {
       <h1>Full Name Display</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor = "firstName">First Name: </label>
+          <label htmlFor = "firstName">First Name:</label>
           <input type ="text" id ="firstName" value = {firstName} onChange={handlefirstName} required/>
         </div>
         <div>
-          <label htmlFor = "lastName">Last Name: </label>
+          <label htmlFor = "lastName">Last Name:</label>
           <input type ="text" id ="lastName" value = {lastName} onChange={handlelastName}  required/>
         </div>
         
-        <button type='submit'>submit</button>
-        {fullName && (<h1>FullName : {fullName}</h1>)}
+        <button type='submit'>Submit</button>
+        {fullName && (<p>Full Name: {fullName}</p>)}
       </form>
     </div>
   );
