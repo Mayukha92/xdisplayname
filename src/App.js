@@ -29,11 +29,11 @@ function App() {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor = "firstName">First Name:</label>
-          <input type ="text" id ="firstName" value = {firstName} onChange={handlefirstName} required/>
+          <input type ="text" id ="firstName" name ="firstName" value = {firstName} onChange={handlefirstName} required/>
         </div>
         <div>
           <label htmlFor = "lastName">Last Name:</label>
-          <input type ="text" id ="lastName" value = {lastName} onChange={handlelastName}  required/>
+          <input type ="text" id ="lastName" name ="lastName" value = {lastName} onChange={handlelastName}  required/>
         </div>
         
         <button type='submit'>Submit</button>
