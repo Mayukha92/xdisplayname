@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 function App() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState('');
-  const [fullName, setFullName] = useState('')
+  // const [fullName, setFullName] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handlefirstName = (e) =>{
     setFirstName(e.target.value);
@@ -16,8 +17,11 @@ function App() {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    if(firstName&& lastName){
-      setFullName(firstName +" " +lastName);
+    if(firstName && lastName){
+      // setFullName(firstName +" " +lastName);
+      setIsSubmitted(true);
+      setFirstName('');
+      setLastName('');
     }else{
       alert('Please fill out both first name and last name')
     }
@@ -37,7 +41,7 @@ function App() {
         </div>
         
         <button type='submit'>Submit</button>
-        {fullName && (<p>Full Name: {fullName}</p>)}
+        {isSubmitted && (<p>Full Name: {firstName} {lastName}</p>)}
       </form>
     </div>
   );
